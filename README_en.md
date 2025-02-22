@@ -13,3 +13,5 @@ Starting with my first GitHub project in February 2025, I plan to upload various
 
 ## Contact
 Feel free to reach out if you have any questions!
+
+.
