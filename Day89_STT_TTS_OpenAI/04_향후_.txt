@@ -1,0 +1,5 @@
+### OpenAI 기반
+STT -> ChatGPT -> TTS
+
+### 사용자 모델 기반 챗봇
+STT -> User Model -> TTS
