@@ -1,0 +1,3 @@
+1.FirstName,2.LastName,3.Age,4.University,5.Courses
+Gildong,Hong,20,Gachon University,"{'Classes': ['Probability', 'Generalized Linear Model', 'Categorical Data Analysis'], 'Major': 'Statistics'}"
+Gildong,Hong,20,Gachon University,"{'Classes': ['Data Structure', 'Programming', 'Algorithms'], 'Minor': 'ComputerScience'}"
