@@ -1,0 +1,29 @@
+/* Header.js 스타일 적용 */
+.nav {
+    background-color: black;
+    padding: 10px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Layout.js 스타일 적용하기 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.mainContent {
+    padding: 20px;
+    flex: 1;
+    background-color: grey;
+}
