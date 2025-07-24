@@ -1,0 +1,54 @@
+# 1. Python 관련 무시 항목
+__pycache__/
+*.py[cod]
+*.so
+
+# 2. 가상환경 디렉토리 (예: venv, .venv 등)
+venv/
+.venv/
+
+# 3. Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+
+# 4. 환경 설정 파일
+.env
+*.env
+
+# 5. 로그, 캐시, 임시파일
+*.log
+*.tmp
+*.swp
+
+# 6. 데이터 및 모델 (크거나 민감한 경우)
+*.csv
+*.tsv
+*.xlsx
+*.h5
+*.pt
+*.pkl
+*.onnx
+*.joblib
+
+# 7. OS/편집기 생성 파일
+.DS_Store
+Thumbs.db
+*.bak
+
+# 8. VS Code 설정 폴더
+.vscode/
+
+# 9. 빌드 결과물
+build/
+dist/
+*.egg-info/
+
+# 10. 압축 파일
+*.zip
+*.tar.gz
+*.rar
+
+# 11. 기타 수동 제외 (원하면 추가)
+# Day50/tmp/
+# Day77/data/large_file.csv
+.exe
+.jar
