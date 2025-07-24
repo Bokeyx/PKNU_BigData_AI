@@ -1,0 +1,24 @@
+"""
+<딕셔너리에서 사용하는 key>
+ - feature_name : 특성이름
+ - data : 특성에 대한 데이터(특성 데이터, 독립변수)
+ - target_names : 종속변수 범주 데이터
+                : class_0 : 레드와인
+                : class_1 : 화이트와인
+                : class_2 : ? (사용안함)
+
+<와인 성분에 포함된 화학조성 특성>
+'alcohol' : 알콜도수
+'malic_acid' : 말산
+'ash' : 회분
+'alcalinity_of_ash' : 회분의 알칼리도
+'magnesium' : 마그네슘
+'total_phenols' : 총 포리페놀
+'flavanoids' : 플라보노이드 폴리페놀
+'nonflavanoid_phenols' : 비 프라보노이드 폴리페놀
+'proanthocyanins' : 프로안토시아닌
+'color_intensity' : 색상 강도
+'hue' : 색상
+'od280/od315_of_diluted_wines' : 희석와인의 비율
+'proline : 프롤린
+"""
