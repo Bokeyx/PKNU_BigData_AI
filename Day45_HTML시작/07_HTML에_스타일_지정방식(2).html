@@ -1,0 +1,49 @@
+<!--
+    <HTML 페이지 내에 스타일 적용하는 방법 3가지>
+        1. 인라인 방식: HTML 태그 내에 Style 속성으로 지정하는 방식
+        2. 내부 방식: head 태그 영역 내에 style 태그들 정의하여 사용하는 방식
+        3. 외부 방식: style을 css파일로 저장한 후 head 태그 영역 내에서 불러들여서 사용하는 방식
+
+        ** HTML페이지 내에 1번~3번이 동시에 모두 사용된 경우 적용 우선 순위
+            인라인 방식 > 내부 방식 > 외부 방식
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_HTML에_스타일_지정방식(2)</title>
+
+    <!-- 내부방식으로 스타일 정의
+        - 스타일을 지정할 태그 또는 클래스명 또는 아이디명을 지정한 후
+        - 딕셔너리 기호(중괄호)를 이용하여 key : value 형식으로 작성합니다. 
+    -->
+    <!--
+        - h3라는 모드 태그의 폰트 색상을 빨상색으로 변경.
+    -->
+    <style>
+        h3 {color: red; text-align: center;}
+        p {color: green;}
+    </style>
+</head>
+<body>
+    <h1>07_HTML에_스타일(CSS)_지정방식(2)</h1>
+    <br/>
+
+    <h3>스타일 적용: 내부 방식1</h3>
+    <p>
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식1111
+    </p>
+
+    <h3>스타일 적용: 내부 방식2</h3>
+    <p>
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식2222
+    </p>
+
+    <h3>스타일 적용: 내부 방식3</h3>
+    <p>
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식3333
+    </p>
+    
+</html>

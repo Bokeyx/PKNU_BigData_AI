@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_태그소개_내부프레임_iframe적용하기</title>
+</head>
+<body>
+    <h1>07_태그소개_내부프레임_iframe적용하기</h1>
+    <hr/>
+
+    <!-- iframe 
+        - 하나의 페이지 내에 또 다른 페이지를 보여주고자 할 때 사용
+        - 간혹 사용됨     
+    -->
+    <h3>네이게이션 영역</h3>
+    <!-- 아래 링크를 클릭하면, iframe영역에 보여주기 -->
+    <a href="./index.html" 
+        target="iframe_view">Index바로가기</a>
+    <a href="./05_HTML_태그소개_블록태그_사용하기.html" 
+        target="iframe_view">05바로가기</a>
+    <a href="./06_HTML_태그소개_레이아웃_설정하기.html"
+        target="iframe_view">06바로가기</a>
+    
+    <hr/>
+
+    <h3>iframe영역</h3>
+    <iframe width="100%" height="500px" 
+            src="https://www.daum.net"
+            name="iframe_view">
+    </iframe>
+    
+</body>
+</html>

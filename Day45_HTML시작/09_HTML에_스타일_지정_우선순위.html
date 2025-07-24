@@ -1,0 +1,52 @@
+<!--
+    <HTML 페이지 내에 스타일 적용하는 방법 3가지>
+        1. 인라인 방식: HTML 태그 내에 Style 속성으로 지정하는 방식
+        2. 내부 방식: head 태그 영역 내에 style 태그들 정의하여 사용하는 방식
+        3. 외부 방식: style을 css파일로 저장한 후 head 태그 영역 내에서 불러들여서 사용하는 방식
+
+        ** HTML페이지 내에 1번~3번이 동시에 모두 사용된 경우 적용 우선 순위
+            인라인 방식 > 내부 방식 > 외부 방식
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_HTML에_스타일_지정_우선순위</title>
+
+    <!-- 외부방식으로 스타일 정의
+       - 외부에 *.css 파일로 스타일 정의
+       - 외부 파일을 link 태그를 이용해서 불러들여서 사용
+       - 외부에 정의할 파일명: ./css/08_css.css
+
+       - rel: 스타일시트 포맷을 사용하겠다는 형식 정의
+       - href: 외부에 정의한 파일 위치 및 파일명
+    -->
+    <link rel="stylesheet" href="./css/08_css.css">
+
+    <!-- 내부 정의 방식-->
+    <style>
+        p {color: aqua;}
+    </style>
+</head>
+<body>
+    <h1>09_HTML에_스타일_지정_우선순위</h1>
+    <br/>
+
+    <h3>스타일 적용: 내부 방식1</h3>
+    <p>
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식1111
+    </p>
+
+    <h3>스타일 적용: 내부 방식2</h3>
+    <p style="color: turquoise;">
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식2222
+    </p>
+
+    <h3>스타일 적용: 내부 방식3</h3>
+    <p>
+        HTML head 태그 영역 내에 스타일로 정의하여 사용하는 방식3333
+    </p>
+    
+</html>

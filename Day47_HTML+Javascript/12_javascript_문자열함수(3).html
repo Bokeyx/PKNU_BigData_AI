@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_javascript_문자열함수(3)</title>
+    <!--
+     (문자열 함수(3))
+      - replace: 특정 단어를 찾아서 -> 다른 문자로 변환(치환)하는 함수
+       -> 문자열.replace("찾을문자", "변경할문자")
+
+      - split: 문자열 내에 있는 구분자를 이용하여 문자열 자르기(각 자른 문자들은 "배열"로 반환됩니다.)
+       -> 문자열.split("구분자")
+       -> 반환된 배열값의 인덱스번호를 이용하여 값을 추출..
+
+     (페이지 새로고침 함수)
+      - location.reload(): 페이지를 초기화 시킴(브라우저에서 새로고침과 동일)
+    -->
+    <script>
+        function goReplace() {
+            let p1Val = document.getElementById("p1").innerHTML;
+            alert(p1Val);
+
+            document.getElementById("p2").innerHTML = p1Val.replace("파이썬", "파이썬/자바/C");
+        }
+        
+        function goSplit() {
+            let p2Val = document.getElementById("p2").innerHTML;
+            alert(p2Val);
+
+            document.getElementById("p3").innerHTML = p2Val.split("/")
+        }
+        
+        function goReload() {
+            alert("화면이 초기화 됩니다.");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    <h1>12_javascript_문자열함수(3)</h1>
+    <hr/>
+
+    <!--
+     1. 버튼 생성
+      - 치환버튼: goReplace() 함수 호출
+      - 구분버튼: goSplit() 함수 호출
+      - 화면초기화: goReload() 함수 호출
+
+     2. p태그 3개 생성
+      - id가 p1인 태그
+       -> 최초 값: "안녕하세요. 파이썬 입니다."
+      - id가 p2인 태그
+      - id가 p3인 태그
+     
+     3. 함수 정의
+      - replace: id가 p1인 태그 내용을 추출하여 원본 문자열로 사용
+               : 찾고자하는 문자 및 변경하고자 하는 문자는 자유롭게
+               : 변경된 결과값을 p2태그에 출력하기 
+                 (변경 시 특수문자 기호 적용, split에서 사용할 수 있도록)
+     
+      - split: id가 p2인 태그 내용을 추출하여 원본 문자열 사용
+             : replace에서 사용한 기호(구분자)를 이용하여 구분한 결과를
+             : id가 p3인 태그에 내용 출력하기
+      
+      - reload: 함수 정의 후 location.reload(); 정의하여 테스트
+    -->
+
+    <p id="p1">안녕하세요. 파이썬 입니다.</p>
+    <p id="p2">Replace에 대한 결과 출력은 이곳에서 됩니다.</p>
+    <p id="p3">Split에 대한 결과 출력은 이곳에서 됩니다.</p>
+
+    <button type="button" onclick="goReplace()">치환</button>
+    <button type="button" onclick="goSplit()">구분</button>
+    <button type="button" onclick="goReload()">화면초기화</button>
+    
+</body>
+</html>

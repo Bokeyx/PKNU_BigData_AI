@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_수직_네비게이션</title>
+    <style>
+        /* ul 태그 스타일 적용하기
+            - 표식기호 없애기, 배경색:원하는색, 안쪽 및 바깥쪾 여백: 0px, 너비 200px
+        */
+        ul {
+            list-style-type: none;
+            background-color: #5C7C89;
+            padding: 0px;
+            margin: 0px;
+            width: 200px;
+        }
+
+        /* li 태그 스타일 적용
+           - 텍스트 정렬: 중앙, 밑에 선그리기: 1px 사이즈, 색상 자유
+        */
+        li {
+            text-align: center;
+            border-bottom: 1px solid #1F4959;
+        }
+
+        /* li 태그 중에 마지막 태그의 실선은 제거하기 */
+        li:last-child {
+            border-bottom: none;
+        }
+
+        /* li 태그 내에 a 태그 스타일 적용하기
+            - 텍스트 색상: 자유롭게, 안쪽여백: 0px, 언더라인 없애기
+        */
+        li a {
+            color: #FFFFFF;
+            padding: 0px;
+            text-decoration: none;
+            display: block
+        }
+
+        /* li 내에 a태그에 마우스가 올라갔을 때 스타일 적용
+            - 배경색: 자유롭게, 글자색: 파랑색
+        */
+        li a:hover {
+            background-color: #011425;
+            color: blue;
+        }
+
+        /* home이 있는 a태그 영역 스타일 적용하기
+            - 배경색: 초록색, 글자색: 흰색
+        */
+        li a.active {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h3>10_수직_네비게이션</h3>
+    <hr>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Daum</a></li>
+        <li><a href="#">Naver</a></li>
+        <li><a href="#">Google</a></li>
+    </ul>
+</body>
+</html>

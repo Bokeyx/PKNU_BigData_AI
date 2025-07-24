@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_HTML_태그소개_Table_스타일적용</title>
+
+    <!-- 내부방식으로 CSS 적용하기 -->
+     <style>
+        /* 모든 table과 td 태그에 대해서 공통 스타일 지정하기 */
+        table, td {
+            /* table 테두리 선 스타일 지정 
+                - 1px: 선두께
+                - solid: 실선
+                - black: 선 색상
+            */
+            border: 1px solid black;
+
+            /* 두줄 라인을 한줄로 스타일 변경하기*/
+            border-collapse: collapse;
+        }
+
+        /* th, td에 대해서만 스타일 별도 지정하기 */
+        th, td {
+            /* 테두리 안쪽 여백 주기 
+                - 테두리 안쪽의 왼쪽, 오른쪽, 위, 아래 여백을 15px 만큼 띄어집니다.
+            */
+            padding: 15px;
+
+            /* 텍스트 중앙 정렬하기 */
+            text-align: center;
+        }
+     </style>
+     <!--
+      위 스타일을 46day에 css 폴더를 생성 후
+       - table.css 파일로 정의하기
+       - index.html에 table.css 파일을 적용해주세요
+     -->
+</head>
+<body>
+    <h1>03_HTML_태그소개_Table_스타일적용</h1>
+    <hr/>
+
+    <!--
+        * table: 행열의 데이터 구조를 그리기 위한 태그(표 태그)
+        * tr: 행을 의미하는 태그
+        * th: 첫번째 행의 제목 열을 의미하는 태그
+        * td: 두번째 행부터 데이터 열을 의미하는 태그
+        * border: 테이블 테두리 그리기(0은 테두리 없음, 1은 테두리 있음)
+    -->
+    <table border="1px" width="500">
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>패스워드</th>
+        </tr>
+        <tr>
+            <td align="center">a001</td>
+            <td>홍길동</td>
+            <td>pwa001</td>
+        </tr>
+        <tr>
+            <td align="center">b001</td>
+            <td>김유신</td>
+            <td>pwb001</td>
+        </tr>
+        <tr>
+            <td align="center">c001</td>
+            <td>이순신</td>
+            <td>pwc001</td>
+        </tr>
+
+        <!-- 열(td) 합치기: colspan 속성 사용 -->
+        <tr>
+            <td align="center">b001</td>
+            <td colspan="1">김유신</td>
+        </tr>
+        <tr>
+            <td align="center">b001</td>
+            <td colspan="2">김유신</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2">총 인원수</td>
+            <td>3명</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="3">b001</td>
+        </tr>
+
+        <!-- 행(tr) 합치기 -->
+        <tr>
+            <td align="center" rowspan="3">lol001</td>
+            <td>lol001</td>
+            <td>pwlol001</td>
+        </tr>
+        <tr>
+            <!-- <td align="center">lol001</td> -->
+            <td>lol001</td>
+            <td>pwlol001</td>
+        </tr>
+        <tr>
+            <!-- <td align="center">lol001</td> -->
+            <td>lol001</td>
+            <td>pwlol001</td>
+        </tr>
+
+         <!-- 행(tr) 이름부분 3개 행을 합치기-->
+        <tr>
+            <td align="center">lol001</td>
+            <td rowspan="3">lol001</td>
+            <td>pwlol001</td>
+        </tr>
+        <tr>
+            <td align="center">lol001</td>
+            <!-- <td>lol001</td> -->
+            <td>pwlol001</td>
+        </tr>
+        <tr>
+            <td align="center">lol001</td>
+            <!-- <td>lol001</td> -->
+            <td>pwlol001</td>
+        </tr>
+    </table>
+
+    <hr>
+    <!-- 테이블에 제목(캡션) 넣기 -->
+    <table border="1">
+        <!-- 테이블 제목(캡션) -->
+         <caption>테이블 제목 입니다.</caption>
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+            <th>패스워드</th>
+        </tr>
+        <tr>
+            <td>a001</td>
+            <td>홍길동</td>
+            <td>pw1000</td>
+        </tr>
+    </table>
+
+    <!--
+     04_HTML_태그소개_목록-표식_생성하기.html 신규 생성하기
+     index.html에 링크 추가
+    -->
+</body>
+</html>

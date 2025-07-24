@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_jQuery</title>
+    <script type = "text/javascript" src="./jquery-3.7.1.min.js"></script>
+    <script type = "text/javascript">
+        $(document).ready(function(){
+            $("#toggle").click(function(){
+                $("p").toggle()
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>02_jQuery :: toggle 기능 사용하기</h1>
+    <hr/>
+    <!--
+     tggle: 특정 태그를 숨겼다가/보였다가를 한번에 수행하는 함수
+
+     1. p태그 생성하기: 내용은 자유롭게
+     2. 버튼 1개 생성하기: 버튼 내용은 자유롭게
+     3. jQuery 생성
+        - 버튼을 클릭하면 -> p태그 숨기기
+        - 버튼을 클릭하며 -> p태그 보이기
+        - toggle()함수 이용: 버튼을 클릭할 대 마다 숨겼다가/보였다가를 처리함
+    -->
+
+    <p>
+        If you feel it, Chase it
+    </p>
+
+    <button id="toggle">클릭</button>
+    
+</body>
+</html>

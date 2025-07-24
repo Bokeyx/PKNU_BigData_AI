@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_javascript_문자열함수(2)</title>
+    <!--
+     (문자열 함수(2))
+      -> 문자열 인덱스는 0부터 찾기 시작합니다.
+      - slice: 문자열 추출하기
+       -> 문자열.slice(찾을시작인덱스, 찾을끝인덱스-1)
+
+      - substring: 문자열 추출하기
+       -> 문자열.substring(찾을시작인덱스, 찾을끝인덱스-1)
+      
+      - substr: 문자열 추출하기
+       -> 문자열.substr(찾을시작인덱스, 시작위치부터 추출할 문자갯수)
+    -->
+    <script>
+        function goSlice() {
+            let p1val = document.getElementById("p1").innerHTML;
+            alert(p1val);
+
+            document.getElementById("p2").innerHTML = "Slice: " + p1val.slice(0, 5);
+        }
+
+        function goSubstring() {
+            let p1val = document.getElementById("p1").innerHTML;
+            alert(p1val);
+
+            document.getElementById("p2").innerHTML = "Substring: " + p1val.substring(7, 13);
+        }
+
+        function goSubstr() {
+            let p1val = document.getElementById("p1").innerHTML;
+            alert(p1val);
+
+            document.getElementById("p2").innerHTML = "Substr: " + p1val.substr(15, 4);
+        }
+    </script>
+</head>
+<body>
+    <h1>11_javascript_문자열함수(2)</h1>
+    <hr/>
+
+    <!--
+        1. p태그 작성
+          - id는 p1으로
+          - 태그와 태그 사이에는 "Apple, Banana, Kiwi"라는 내용 표시
+        
+        2. p태그 작성
+          - id는 p2로
+          - 태그와 태그 사이 내용은 임의로 작성
+        
+        3. 버튼 3개 만들기
+          - 첫번째 버튼을 클릭하면 goSlice() 함수 호출
+          - 두번째 버튼을 클릭하면 goSubstring() 함수 호출
+          - 세번째 버튼을 클릭하면 goSubstr() 함수 호출
+        
+        4. 함수 정의
+          - 각 함수에서 id가 p1인 태그와 태그사이의 텍스트 내용을 추출
+          - 추출한 내용의 문자열을 원본으로 사용하여, 각 함수의 기능에 맞게 처리 후
+          - 처리된 결과값을 id가 p2인 태그에 출력(보여주기)하기
+          - 찾고자 하는 문자의 위치는 아래와 같이 처리
+           -- slice: Apple 추출
+           -- substring: Banana 추출
+           -- substr: kiwi 추출
+    -->
+    <p id="p1">Apple, Banana, Kiwi</p>
+    <p id="p2">결과 출력은 이곳에 됩니다.</p>
+
+    <button type="button" onclick="goSlice()">Slice</button>
+    <button type="button" onclick="goSubstring()">Substring</button>
+    <button type="button" onclick="goSubstr()">Substr</button>
+    
+</body>
+</html>

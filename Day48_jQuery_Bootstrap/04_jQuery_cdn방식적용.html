@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_jQuery_cdn방식적용</title>
+    <!-- jQuery 라이브러리 불러들이기 
+     * jQuery 라이브러리 사용 방법
+      1. .js파일로 관리하여 외부파일 불러들이는 방식
+      2. CDN 방식으로 jquery라이브러리를 제공하는 사이트의 URL이용
+       - CDN: Content Delivery Network(콘텐츠 전송 네트워크) 방식
+       - Content: 이미지, css, javascript. 동영상 같은 웹콘텐츠 등을 의미
+       - Delivery: 사용자에게 전송한다는 의미
+       - Network: 여러 지역에 분산된 서버들에서 제공(라이브러리)하는
+                  네트워크(url 주소)를 의미
+       - 별도로 파일을 관리하지 않아도 됨.
+         단, 인터넷이 되어야 합니다.
+    -->
+    <!-- <script type="text/javascript" src="./jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        // id가 div1인 태그 클릭 이벤트 처리
+        $(document).ready(function(){
+            // id가 div2인 태그를 숨겼다/보였다 처리
+            $("#div1").click(function(){
+                // $("#div2").toggle()
+
+                /*
+                 * slideToggle(): 서서히 숨기고/보이게하기
+                  - 속도 속성: slow(느린 속도), fast(빠른 속도), normal(보통속도)
+                               직접 정수값 입력(1000이 1초를 의미함)
+                */
+                $("#div2").slideToggle(500)
+            })
+        });
+    </script>
+
+    <style>
+        #div1 {
+            background-color: yellow;
+            text-align: center;
+            padding: 5px;
+            border: 1px solid blue;
+        }
+        
+        #div2 {
+            background-color: yellow;
+            text-align: center;
+            padding: 50px;
+            border: 1px solid blue;
+        }
+    </style>
+    
+</head>
+    <h1>04_jQuery_cdn방식적용</h1>
+    <hr/>
+
+    <!--
+     1. id가 div1인 div태그 생성하기: 내용 자유롭게
+     2. id가 div2인 div태그 생성하기: 내용 자유롭게
+     3. 스타일 적용하기
+      - div 태그 공통 적용
+       -> 배경색: 노랑, 텍스트정렬: 중앙, 안쪽여백: 5px, 실선 파랑색으로 표시
+      -id가 div2인 dic태그 스타일: 안쪽여백 50px
+
+     4. jQuery 코드 정의
+      - id가 div1을 클릭하면 -> div2를 숨겼다가/보였다가 처리하기..(toggle 함수 사용)
+    -->
+    
+    <div id="div1">
+        Div 여기를 클릭하세요!
+    </div>
+
+    <div id="div2">
+        Div 숨기고 싶으시면 위를 클릭하세요
+    </div>
+<body>
+    
+</body>
+</html>

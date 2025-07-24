@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_Javascript_문자열함수_자바스크립트_위치이동</title>
+    <!--
+      (문자열 관련 함수)
+       ** let strVal = "java python java"
+
+       - 문자열의 길이 : 문자열변수명.length -> 반환값=16
+
+       - 특정 문자 찾기 : 문자열변수명.indexOf("찾을문자=java") -> 반환값=0
+                        : 첫번째 찾은 문자의 시작 인덱스 위치값(배열 인덱스 번호) 반환
+
+       - 특정 문자 찾기 : 문자열변수명.lastIndexOf("찾을문자=java") -> 반환값=12
+                        : 마지막 찾은 문자의 시작 인덱스 위치값 반환
+    -->
+    
+</head>
+<body>
+    <h1>10_Javascript_문자열함수_자바스크립트_위치이동</h1>
+    <hr/>
+
+    <!--
+        1. p태그 작성
+          - id는 p1으로
+          - 태그와 태그 사이에는 "Please, locate where 'locate'"라는 내용 표시
+        
+        2. p태그 작성
+          - id는 p2로
+          - 태그와 태그 사이 내용은 임의로 작성
+        
+        3. 버튼 3개 만들기
+          - 첫번째 버튼을 클릭하면 goLength() 함수 호출
+          - 두번째 버튼을 클릭하면 goIndexOf() 함수 호출
+          - 세번째 버튼을 클릭하면 goLastIndexOf() 함수 호출
+        
+        4. 함수 정의
+          - 각 함수에서 id가 p1인 태그와 태그사이의 텍스트 내용을 추출
+          - 추출한 내용의 문자열을 원본으로 사용하여, 각 함수의 기능에 맞게 처리 후
+          - 처리된 결과값을 id가 p2인 태그에 출력(보여주기)하기
+          - 찾고자 하는 문자는 매개변수 또는 직접 작성하여 처리..
+    -->
+    <p id="p1">Please, locate where 'locate'</p>
+    <p id="p2">결과 출력은 이곳에 됩니다...</p>
+
+    <script type="text/javascript">
+      // 모든 함수에서 사용하기에 전역변수로 정의
+      let p1Val = document.getElementById("p1").innerHTML;
+      function goLength() {
+          // let p1Val = document.getElementById("p1").innerHTML;
+          alert(p1Val);
+
+          document.getElementById("p2").innerHTML = "문자열의 길이 : " + p1Val.length;
+      }
+
+      function goIndexOf() {
+          // let p1Val = document.getElementById("p1").innerHTML;
+          // alert(p1Val);
+
+          document.getElementById("p2").innerHTML = "첫번째 찾은 문자의 시작위치 : " + p1Val.indexOf("locate");
+      }
+
+      function goLastIndexOf() {
+          // let p1Val = document.getElementById("p1").innerHTML;
+          // alert(p1Val);
+
+          document.getElementById("p2").innerHTML = "마지막 찾은 문자의 시작위치 : " + p1Val.lastIndexOf("locate");
+      }
+  </script>
+
+    <button type="button" onclick="goLength()">문자열 길이 확인하기</button>
+    <button type="button" onclick="goIndexOf()">첫번째 찾은 문자열 위치 확인하기</button>
+    <button type="button" onclick="goLastIndexOf()">마지막 찾은 문자열 위치 확인하기</button>
+
+</body>
+</html>

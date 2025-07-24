@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_javascript</title>
+    <script type="text/javascript">
+        let cnt = 0
+        let sum = cnt
+        function goStackNum(msg) {
+            cnt += 1;
+            sum += cnt;
+            document.getElementById(msg).innerHTML = "누적된 값 :" + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>06_javascript :: 1씩 누적값 출력</h1>
+    <br/>
+
+    <!--
+     1. 버튼생성: 버튼 보여주는 값 자유롭게
+     2. 버튼을 클릭하면 자바스크립트 함수 호출
+     3. 함수 기능
+      - 버튼이 클릭될 때마다 정수값을 1씩 증가하면서 누적된 합산값을 화면에 출력하기
+      - 보이는 위치: p태그를 작성하여 p태그 내에 보이기
+        (클릭 할 때 마다 1씩 증가된 누적된 합산값이 p태그에 보이게 하면 됩니다.)
+    -->
+
+    <p id="p1">
+        여기에 누적된 합산 값을 출력합니다
+    </p>
+    <button type="button" onclick="goStackNum('p1')">클릭</button>
+    
+</body>
+</html>

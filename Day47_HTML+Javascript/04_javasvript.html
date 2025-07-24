@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_javasvript</title>
+    <script type="text/javascript">
+        function goMath(msg) {
+            alert("goMath()함수 호출 잘 됨.")
+            let x = 7;
+            let y = 8;
+            let sum = x * y;
+            document.getElementById(msg).innerHTML = "x와 y의 곱한값 = " + sum;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>04_javasvript</h1>
+    <hr/>
+
+    <p id="p1">
+      something something
+    </p>
+
+    <!--
+     1. 버튼 만들기: 버튼에 보이는 값은 "클릭하기"
+     2. 버튼을 클릭하면: goMath() 함수 호출
+     3. goMath() 함수 기능
+      - x, y 변수 선언 및 정의(값은 임의로)
+      - sum 변수에 x변수의 값과 y변수의 값을 곱한 값으로 정의
+      - p태그의 id가 p1인 태그 사이에 함수에서 계산된 sum값 축력하기
+    -->
+    <button type="button" onclick="goMath('p1')">클릭하기</button>
+    
+</body>
+</html>

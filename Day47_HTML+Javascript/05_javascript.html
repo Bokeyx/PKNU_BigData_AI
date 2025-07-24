@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_javascript</title>
+    <script type="text/javascript">
+        // 함수는 호출될 때마다 초기화 상태 입니다.
+        // - 함수 기능이 끝나면 모든 자원(메모리)은 초기화 됩니다.
+
+        // 전역변수 선언하기
+        let count = 0
+        function goStackClick(msg) {
+            // cnt = cnt + 1
+            count += 1
+
+            document.getElementById(msg).innerHTML = "클릭한 횟수 = " + count
+        }
+    </script>
+</head>
+<body>
+    <h1>05_javascript :: 1씩 증가시키기</h1>
+    <hr/>
+
+    <!--
+     1. 버튼생성: 버튼 보여주는 값 자유롭게
+     2. 버튼을 클릭하면 자바스크립트 함수 호출
+     3. 함수 기능
+      - 버튼이 클릭될 때마다 정수값을 1씩 증가하면서 화면에 출력하기
+        (클릭 할 때 마다 1씩 증가된 값이 p태그 내에 보이기)
+      - 보이는 위치: p태그를 작성하여 p태그 내에 보이기
+    -->
+    <p id="p1">
+        클릭한 횟수 = 0
+    </p>
+
+    <button type="button" onclick="goStackClick('p1')">많이 눌러 봐~</button>
+    
+</body>
+</html>

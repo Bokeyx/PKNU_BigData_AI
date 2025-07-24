@@ -1,0 +1,35 @@
+<!--
+    <HTML 페이지 내에 스타일 적용하는 방법 3가지>
+        1. 인라인 방식: HTML 태그 내에 Style 속성으로 지정하는 방식
+        2. 내부 방식: head 태그 영역 내에 style 태그들 정의하여 사용하는 방식
+        3. 외부 방식: style을 css파일로 저장한 후 head 태그 영역 내에서 불러들여서 사용하는 방식
+
+        ** HTML페이지 내에 1번~3번이 동시에 모두 사용된 경우 적용 우선 순위
+            인라인 방식 > 내부 방식 > 외부 방식
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_HTML에_스타일_지정방식(1)</title>
+</head>
+<body>
+    <h1>06_HTML에_스타일(CSS)_지정방식(1)</h1>
+    <br/>
+
+    <h3>스타일 적용: 인라인 방식</h3>
+    <p style="color: blue;">
+        HTML 태그 내에 스타일을 적용하는 방식
+    </p>
+    <h3>스타일 적용: 인라인 방식</h3>
+    <p style="color: rgb(0, 0, 255);">
+        HTML 태그 내에 스타일을 적용하는 방식
+    </p>
+    <h3>스타일 적용: 인라인 방식</h3>
+    <p style="color: #0000ff;">
+        HTML 태그 내에 스타일을 적용하는 방식(#을 이용한 16진수 색상값 주로 사용됨)
+    </p>
+</body>
+</html>

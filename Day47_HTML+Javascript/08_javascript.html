@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_javascript</title>
+    <script type="text/javascript">
+        function goClick(){
+            /*
+                - key는 mem_id, mem_pw, mem_age, mem_addr
+                  (key는 문자열이 아닌 변수명처럼 사용됩니다.-문자열로 작성하지 않습니다.)
+                - value는 'a001', 'asdf1234', 25, '부산 수영구'
+            */
+            let obj = {mem_id:'a001', mem_pw:'asdf1234', 
+                       mem_age:25, mem_addr:'부산 수영구'};
+            
+            document.getElementById("mem_id").innerHTML = obj.mem_id;
+            document.getElementById("mem_pw").innerHTML = obj.mem_pw;
+
+            let tabelTag  = "<table border='1'>";
+                tabelTag += "   <tr><th>아이디</th><th>패스워드</th></tr>";
+                tabelTag += "   <tr><td>"+ obj.mem_id +"</td><td>"+ obj.mem_pw +"</td></tr>";
+                tabelTag += "</table>";
+            
+            document.getElementById("inTable").innerHTML = tabelTag;
+        }
+    </script>
+</head>
+<body>
+    <h1>09_javascript :: 딕셔너리(Json) 데이터 사용</h1>
+
+    <!--
+     1. 버튼 생성하기
+     2. 버튼이 클릭되면 함수 호출하기
+     3. 함수 정의
+      - 오브젝트 타입(딕셔너리, Json) 변수 선ㅅ언과 정의
+       * key는 mem_id, mem_pw, mem_age, mem_addr
+         (key는 문자열이 아닌 변수명처럼 사용됩니다)
+       * value는 'a001', 'asdf1234', '25', '부산 수영구'
+     4. 테이블 작성하기
+      - 제목: 아이디, 패스워드
+      - 데이터는, 아이디는 mem_id의 값을 사용
+                  패스워드는 mem_pw의 값을 사용
+    -->
+    
+
+    <table border="1">
+        <tr>
+            <th>아이디</th>
+            <th>패스워드</th>
+        </tr>
+        <tr>
+            <td id="mem_id">아이디값 넣기</td>
+            <td id="mem_pw">패스워드값 넣기</td>
+        </tr>
+    </table>
+
+
+    <div id="inTable">여기에 테이블 스크립트 넣기</div>
+
+    <button type="button" onclick="goClick()">클릭하세요~</button>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!--
+1. 레이아웃 기획하기
+2. 네비게이션(메뉴) 기획하기
+3. 각 메뉴마다 내용 기획하기
+4. 기획된 내용을 기반으로 html, css 적용하기
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self_introduction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 상단 레이아웃 */
+        #top {
+            background-color: #1F4959;
+            color: #FFFFFF;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* 메뉴와 타이틀을 양쪽 끝으로 배치 */
+            align-items: center;
+        }
+
+        #top h1 {
+            margin-left: 20px;
+        }
+
+        #nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        #nav a {
+            color: #FFFFFF;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        #nav a:hover {
+            color: #242424;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        #top1 {
+            background-color: #1F4959;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        /* 중간 구간 */
+        #mid {
+            background-color: #5C7C89;
+            color: #FFFFFF;
+            padding: 50px;
+        }
+
+        #mid ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        #mid li {
+            margin-bottom: 10px;
+        }
+
+        /* 하단 구간 */
+        #bottom {
+            background-color: #242424;
+            color: #FFFFFF;
+            padding: 50px;
+            text-align: center; /* 중앙 정렬 */
+        }
+
+        #bottom ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #bottom li {
+            margin-bottom: 10px;
+        }
+
+        /* 전체 페이지 여백 */
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 구간 -->
+    <div id="top">
+        <h1>Information</h1>
+        <div id="nav">
+            <a href="./index.html">Home</a>
+            <a href="./01_HTML_태그소개_a.링크_스타일적용하기.html">메뉴1</a>
+            <a href="./02_HTML_태그소개_Table_정의하기.html">메뉴2</a>
+            <a href="./03_HTML_태그소개_Table_스타일적용.html">메뉴3</a>
+            <a href="./04_HTML_태그소개_목록-표식_생성하기.html">메뉴4</a>
+        </div>
+    </div>
+
+    <div id="top1">
+        <h1>김보경씨</h1>
+        <ul>
+            <li>something</li>
+            <li>something</li>
+            <li>something</li>
+            <li>something</li>
+            <li>something</li>
+        </ul>
+    </div>
+
+    <!-- 중간 구간 -->
+    <div id="mid">
+        <ul>
+            <li>HI,</li>
+            <li>i don't know what to write down</li>
+            <li>well we will see later</li>
+            <li>i mean i need to make it look cool u know</li>
+            <li>ahh f**k</li>
+        </ul>
+    </div>
+
+    <!-- 하단 구간 -->
+    <div id="bottom">
+        <li>Contact
+            <ul>
+                <li>Email</li>
+                <li>Instagram</li>
+            </ul>
+        </li>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_jQuery :: 사용방법</title>
+    <!-- jQuery 라이브러리 불러들이기 (보통 head 태그 영역 상단에 위치합니다.) -->
+    <script type="text/javascript" src="./jquery-3.7.1.min.js"></script>
+
+    <!-- 내부 방식 javascript 처리하기 -->
+    <script type="text/javascript">
+        /*
+         - jQuery의 코드의 시작은 $로 시작합니다.
+         - $(document): 해당 html의 문서 전체 정보를 의미함
+         - $(): 괄호 안에는 -> document, 태그이름, 아이디속성, 클래스 속성 등이 정의됨
+              : 기존의 getElementById, getElementByClassName
+         - ready: HTML 문서(Dom)가 완전히 로드되었는지 확인 후 실행됨
+         - function{}: 함수 내부에 사용할 코드를 작성합
+        */
+        $(document).ready(function(){
+            // 코드 작성은 function 내부에 작성합니다
+            // id가 hide인 버튼을 클릭하면 -> p태그 숨기기
+            $("#hide").click(function(){
+                // 처리 코드는 이곳에...
+                // p태그 정보를 찾아서 숨기기
+                $("p").hide();
+            });
+        });
+
+            // id가 show인 버튼을 클릭하면 -> p태그 보이기
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("p").show();
+            });
+        });
+ 
+    </script>
+</head>
+<body>
+    <h1>01_jQuery :: 사용방법</h1>
+    <hr/>
+
+    <p>
+        jQuery 라이브러리 사이트: https://jquery.com
+    </p>
+
+    <!-- 버튼 2개 만들기-->
+    <button id="hide">p태그 숨기기</button>
+    <button id="show">p태그 보이기</button>
+</body>
+</html>

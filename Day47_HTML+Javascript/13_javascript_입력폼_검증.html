@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_javascript_입력폼_검증</title>
+    <script type="text/javascript">
+        function goLogin() {
+            // alert("함수 호출 됩니다.");
+            // from 태그의 정보 가지고 오기
+            let fm = document.getElementById("fm");
+
+            // 아이디값 추출하기
+            // form 태그 내에 속성 name이 mem_id인 태그의 입력된 value값 추출
+            let mem_id = fm.mem_id.value;
+            let mem_pw = fm.mem_pw.value;
+            // alert(mem_id + "/" + mem_pw);
+            
+            /* 입력 폼에 대한 사용자 입력 여부 확인하기*/
+            /* 아이디 입력 여부 확인하기 */
+            if(mem_id == "") {
+                alert("아이디를 입력해 주세요");
+                // 폼태그 내에 name 속성 이름이
+                //  -> mem_id인 태그를 찾아서 커서를 위치할 수 있도록 함
+                fm.mem_id.focus();
+                return;
+            }
+
+            /* 패스워드 입력 여부 확인하기 */
+            if(mem_pw == "") {
+                alert("패스워드를 입력해 주세요");
+                fm.mem_pw.focus();
+                return;
+            }
+
+            // 이동할 페이지(입력된 데이터를 전송할 페이지) 정의하기
+            // form 태그의 action 속성의 값을 변경할 수 있음
+            fm.action = "./11_javascript_문자열함수(2).html";
+
+            // 정의된 페이지로 전송 시키기: 전송(submit)
+            fm.submit();
+        }
+    </script>
+</head>
+<body>
+    <h1>13_javascript_입력폼_검증</h1>
+    <hr/>
+
+    <!--
+     1. form 태그 정의하기
+      - name은 fm, id는 fm, action은 12_xxx.html 파일지정, 전송방식은 get으로 정의
+     
+     2. form 태그 사이에 입력 태그 정의하기
+      - 아이디 text 입력 받기: name은 mem_id, id는 mem_id
+      - 패스워드 text 입력 받기: name은 mem_pw, id는 mem_pw
+
+     3. 버튼 생성
+      - button 태그로 생성: 클릭하면 goLogin() 함수 호출
+      - input 태그의 submit 타입으로 생성, value 값은 "로그인"
+
+     4. goLogin() 함수 정의 후 팝업창만 띄워주세요: 내용은 "함수 호출 됩니다."
+    -->
+<form id="fm" name="fm" action="./12_javascript_문자열함수(3).html" method="get">
+    
+    <!--
+     placeholder: 최초에 입력 안내 문구 보여주기
+     required: 입력 여부 확인(입력이 안되어 있으면 전송 안시킴)
+             : subnit 버튼인 경우만 해당됨
+    -->
+    아이디: <input type="text" name="mem_id" id="mem_id" size="20"
+             placeholder="아이디를 입력해 주세요."
+             required>
+    <br/>
+    패스워드: <input type="password" name="mem_pw" id="mem_pw" size="20"
+               placeholder="패스워드를 입력해 주세요."
+               required>
+    <hr/>
+    <button type="button" onclick="goLogin()">button 로그인</button>
+    <!--
+     (submit)
+      - form태그 내에 속성을 통해서 페이지 전송함
+      - 전송 시 form 태그 내에 name 속성을 정의된 value의 입력값들을 전송함
+      - 전송 시 ?mem_id=a001&mem_pw=asdf와 같은 형태로 만들어서 전송시킴
+    -->
+    <input type="submit" value="Submit 로그인">
+</form>
+</body>
+</html>
