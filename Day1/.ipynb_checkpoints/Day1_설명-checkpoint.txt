@@ -1,0 +1,25 @@
+빅데이터 - 기획, 분석, 엔지니어
+
+1. Anaconda 설치
+
+2. Anaconda Prompt 실행
+	- 아나콘다가 관리하는 root 경로 : C:\Users\Administrator
+	- 우리가 사용 할 작업 폴더로 이동
+	>
+
+3. (base)
+	: Anaconda가 관리하는 대표 가상환경
+	: 이곳에는 라이브러리 설치를 하지 않습니다.
+
+	- (base) 가상공간에 설치된 라이브러리 목록 확인
+		>conda list
+
+	- Python Version 확인
+		> python --version
+
+	- Anaconda 명령어 : conda 라는 이름으로 명령을 시작합니다.
+		-- conda 버전 확인
+			> conda --version
+
+4. 새로운 가상환경 생성하여 진행합니다.
+	- 우리가 별도로 생성 할 가상환경(가상공간)은 (base) 가상공간에서 수행
