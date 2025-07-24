@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive BlueBottle Header Custom</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: rgb(244, 238, 230);
+        color: black;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: top 0.3s;
+        z-index: 1000;
+        position: relative;
+    }
+
+    .left-menu, .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .left-menu a, .icons button {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 14px;
+        
+    }
+
+    .center-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .center-logo a img {
+        height: 50px;
+    }
+
+    .icons button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 3000;
+        position: relative;
+    }
+    
+    .close-btn {
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    cursor: pointer;
+    }
+
+    .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(244, 238, 230);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    }
+
+    #menu-toggle:checked ~ .menu-overlay {
+    display: flex;
+    }
+
+    .overlay-menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    }
+
+    .overlay-menu li {
+    margin: 20px 0;
+    }
+
+    .overlay-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    }
+
+    /* 모바일 전용 햄버거 버튼 표시 */
+    @media (max-width: 768px) {
+        .menu-icon {
+            display: block;
+        }
+        .left-menu {
+            display: none;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="left-menu">
+        <a href="....">베스트셀러</a>
+        <a href="....">세트</a>
+        <a href="....">카페</a>
+        <a href="../blog.html">블로그</a>
+    </div>
+
+    <div class="center-logo">
+        <a href="...."><img src="https://via.placeholder.com/50x30?text=LOGO" alt="Logo"></a>
+    </div>
+
+    <div class="icons">
+        <button title="검색">🔍</button>
+        <button title="마이페이지">👤</button>
+        <button title="장바구니">🛒</button>
+    </div>
+</header>
+
+<!-- 입력자리 -->
+
+<!-- 입력자리 -->
+
+<script>
+    function toggleMenu() {
+        document.querySelector('.left-menu').classList.toggle('active');
+    }
+
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+            // 스크롤 내리는 중
+            header.style.top = '-100px';
+        }
+
+        if (currentScroll < lastScroll) {
+            // 스크롤 올리는 중 (위치 상관 없음 바로 등장)
+            header.style.top = '0';
+        }
+
+        lastScroll = currentScroll;
+    });
+</script>
+
+</body>
+</html>

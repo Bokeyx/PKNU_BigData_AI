@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #fdfbf7;
+    align-items: center;
+    padding: 5px;
+}
+
+.nav-menu {
+    list-style: none;        /* 점 제거 */
+    display: flex;           /* 가로 정렬 */
+    gap: 5px;               /* 간격 주기 (원하는 만큼 조절 가능) */
+    padding: 0 40px;
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;   /* 밑줄 제거 */
+    color: black;            /* 글자색 검정 */
+    font-weight: 500;        /* 폰트 두께 (선택) */
+    font-size: 16px;         /* 글자 크기 (선택) */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 49%;
+}
+
+.logo>img {
+    width: 22px;
+    margin-top: 4px;
+}
+
+.icons {
+    width: 49%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 16px 0;
+}
+
+.icons>img {
+    width: 20px;
+    height: 20px;
+}
+
+.icons>img:hover {
+    cursor: pointer;
+}
+
+li,
+.icons>img {
+    margin-right: 3%;
+}
+
+/* 로그인 팝업*/
+/* 로그인 팝업 스타일 */
+#login-popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+#login-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    background: #fdfbf7;
+
+    width: 400px;
+    padding: 40px 30px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+}
+
+#login-popup.show .popup-content {
+    transform: translateX(0);
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.popup-content h2 {
+    text-align: cne;
+}
+
+.popup-content button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background: none;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+

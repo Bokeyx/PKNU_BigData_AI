@@ -1,0 +1,62 @@
+<React 프로젝트 신규 생성 : 기본 사용법 실습>
+ 1. React 신규 프로젝트 생성
+   - 프로젝트명 : day50_02-react-app
+    >npx create-react-app day50_02-react-app
+
+ 2. 프로젝트 생성 후 서버 구동 테스트 하기
+   - 생성된 프로젝트로 이동
+    >cd day50_02-react-app
+
+   - 서버 실행
+    >npm start
+
+ 3. Front-End 프로그램
+   - ./public/index.html : 수정 없음
+   - ./src/index.js : 수정 없음
+
+   - ./src/App.css : 전체 수정
+   - ./src/App.js : 전체 수정
+
+
+
+
+<React 프로젝트 신규 생성 : 기본 사용법 실습>
+ 1. React 신규 프로젝트 생성
+   - 프로젝트명 : day50_03-react-app
+    >npx create-react-app day50_03-react-app
+
+ 2. 프로젝트 생성 후 서버 구동 테스트 하기
+  - 프로젝트 폴더로 이동
+    >cd day50_03-react-app
+
+  - 서버 실행
+    >npm start
+
+3. Front-End 프로그램 : React의 "prop" 개념 적용
+   - ./public/index.html : 수정 없음
+   - ./src/index.js : 수정 없음
+
+   - ./src/App.js : 전체 수정
+   - ./src/WelcomeMessage.js 컴포넌트 생성 (파일명은 대문자로 시작)
+   - ./src/UserProfile.js 컴포넌트 생성 (파일명은 대문자로 시작)
+
+
+<React 프로젝트 신규 생성 : 컴포넌트 재사용(반복 수행) 실습>
+ 1. React 신규 프로젝트 생성
+   - 프로젝트명 : day50_04-react-app
+    >npx create-react-app day50_04-react-app
+
+ 2. 프로젝트 생성 후 서버 구동 테스트 하기
+  - 프로젝트 폴더로 이동
+    >cd day50_04-react-app
+
+  - 서버 실행
+    >npm start
+
+3. Front-End 프로그램 : 컴포넌트 재사용(반복 수행)
+   - ./public/index.html : 수정 없음
+   - ./src/index.js : 수정 없음
+
+   - ./src/App.js : 전체 수정
+   - ./src/Card.js : 신규 생성
+   - ./src/ProfileList.js : 신규생성

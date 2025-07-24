@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>간단한 방법부터 전문적인 방법까지, 집에서 커피를 추출하는 여섯 가지 방법</title>
+<!-- 1. bootstrap.min.css 라이브러리 가장 먼저 정의 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+rel="stylesheet" 
+integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+crossorigin="anonymous">
+<!-- 2. jquery-3.x.x.min.js 정의 -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+crossorigin="anonymous"></script>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background-color: rgb(244, 238, 230);
+    }
+    
+    h1{
+        text-align: center;
+        padding: 20px;
+    }
+
+    .img_box{
+        margin: auto;
+        display: block;
+        height: 620px;
+        width: 1100px;
+    }
+    h3{
+        text-align: center;
+    }
+    .text-center-box {
+        max-width: 700px;   /* 최대 가로폭 제한 */
+        margin: 0 auto;     /* 좌우 자동 여백 = 가운데 정렬 */
+        text-align: center; /* 텍스트 가운데 정렬 */
+        padding: 20px;      /* 상하 여백 */
+        font-size: large;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background-color: rgb(244, 238, 230);
+        color: black;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: top 0.3s;
+        z-index: 1000;
+        position: relative;
+    }
+
+    .left-menu, .icons {
+        display: flex;
+        align-items: center;
+    }
+
+    .left-menu a, .icons button {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 14px;
+        
+    }
+
+    .center-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .center-logo a img {
+        height: 50px;
+    }
+
+    .icons button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 3000;
+        position: relative;
+    }
+    
+    .close-btn {
+    font-size: 30px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    cursor: pointer;
+    }
+
+    .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(244, 238, 230);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    }
+
+    #menu-toggle:checked ~ .menu-overlay {
+    display: flex;
+    }
+
+    .overlay-menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    }
+
+    .overlay-menu li {
+    margin: 20px 0;
+    }
+
+    .overlay-menu a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    }
+
+    /* 모바일 전용 햄버거 버튼 표시 */
+    @media (max-width: 768px) {
+        .menu-icon {
+            display: block;
+        }
+        .left-menu {
+            display: none;
+        }
+    }
+
+
+</style>
+</head>
+
+<body>
+
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="left-menu">
+            <a href="....">베스트셀러</a>
+            <a href="....">세트</a>
+            <a href="....">카페</a>
+            <a href="../blog.html">블로그</a>
+        </div>
+
+        <div class="center-logo">
+            <a href="...."><img src="./bluebottle_removed_bg.png" alt="Logo"></a>
+        </div>
+
+        <div class="icons">
+            <button title="검색">🔍</button>
+            <button title="마이페이지">👤</button>
+            <button title="장바구니">🛒</button>
+        </div>
+    </header>
+
+    <!-- 입력자리 -->
+    <h1>나에게 맞는 브루잉 방법을 선택하는 법</h1>
+    <br/>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>간단한 방법부터 전문적인 방법까지, 집에서 커피를 추출하는 여섯 가지 방법</p>
+        </blockquote>
+        <cite title="Source Title">6분 길이</cite>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<cite title="Source Title">블루보틀 코리아</cite>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<cite title="Source Title">2024년 7월 1일</cite>
+    </figure>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <img class="img_box" src="https://kr.bluebottlecoffee.com/cdn/shop/files/2220_1232.jpg?v=1723421111&width=1680" >
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h3>블루 보틀 with 넷플릭스</h3>
+    <h3>온전한 휴식을 위한 특별한 커피 한 잔</h3>
+    <br/>
+    <div class="text-center-box">
+        <p>일상 속 즐거움을 선사하는 블루 보틀과 넷플릭스는 하루 중 휴식이 필요한 순간을 위해 ‘블루 보틀 with 넷플릭스' 선보입니다.</p>
+        <p>오전에는 은은한 달콤함과 부드러운 풍미가 균형잡힌 ‘모닝 어드벤쳐'를, 오후에는 과일의 생동감이
+            느껴지는 ‘데이 브레이크', 저녁에는 토스트 향처럼 따뜻하며 늦은 시간에도 부담없이 마실 수 있는
+            디카페인 ‘무비 나이트' 3가지로 준비하였습니다.</p>
+        <p>좋아하는 것들로 순간을 채울 수 있게, 블루 보틀과 넷플릭스가 여러분의 하루로 걸어 들어갑니다.</p>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <img class="img_box" src="https://kr.bluebottlecoffee.com/cdn/shop/files/netflix_blog_pc.jpg?v=1724115880&width=1680" >
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h3>정성스런 커피 한 잔. 푸어 오버란?</h3>
+    <div class="text-center-box">
+        <p>푸어 오버는 Pour(붓다)와 Over(과하게)를 합친 말로 물을 과하게 부어서 커피가 가진 성분을 빠르게 추출하는 방법을 뜻합니다.</p>
+        <p>빠르게, 하지만 정성스레 내린 커피 한 잔을 ‘블루 보틀 with 넷플릭스' 원두로 즐겨 보세요.</p>
+    </div>
+    <!-- 입력자리 -->
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.left-menu').classList.toggle('active');
+        }
+
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll) {
+                // 스크롤 내리는 중
+                header.style.top = '-100px';
+            }
+
+            if (currentScroll < lastScroll) {
+                // 스크롤 올리는 중 (위치 상관 없음 바로 등장)
+                header.style.top = '0';
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+        <!-- 3. bootstrap.bundle.min.js 정의 태그 가장 하단에 정의해야함 -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" 
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

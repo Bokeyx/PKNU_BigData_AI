@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보경</title>
+
+    <link rel="stylesheet" href="./css/header.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2107@1.0/NanumSquareRound.css">
+    <style>
+        body {
+        font-family: 'NanumSquareRound', sans-serif;
+        background-color: #fffefc;
+        color: #333;
+        margin: 0;
+        }
+    </style>
+    
+
+</head>
+<body>
+    <div id="header">
+        <ul class="nav-menu">
+          <li><a href="./shopping.html">쇼핑</a></li>
+          <li><a href="./somethingthatwehaventdontyet.html">베스트셀러</a></li>
+          <li><a href="./somethingthatwehaventdontyet.html">세트</a></li>
+          <li><a href="./somethingthatwehaventdontyet.html">카페</a></li>
+          <li><a href="./somethingthatwehaventdontyet.html">블로그</a></li>
+        </ul>
+      
+        <div class="logo">
+            <svg width="23" height="57" viewBox="0 0 23 57" fill="none" xmlns="http://www.w3.org/2000/svg" class="header__heading-logo motion-reduce">
+                <path id="blue bottle logo" fill-rule="evenodd" clip-rule="evenodd" d="M10.2755 2.6693C10.2755 2.6693 9.60849 2.61864 9.56205 2.61441C9.34378 2.58541 9.14456 2.5623 8.96291 2.54123C7.58463 2.38135 7.21707 2.33871 7.20215 0.727327C7.23592 0.292495 7.68342 -0.67849 8.56152 0.752657C8.95414 1.20438 9.43963 1.45768 9.84068 1.59277C9.74867 1.56104 9.85485 1.57674 10.095 1.61226C10.8136 1.7185 12.7314 2.00207 14.1299 1.72364C14.6027 2.04871 14.1257 2.6313 13.9737 2.80017C13.9315 2.84661 12.1499 3.28988 10.4528 3.18012C10.4485 3.16583 10.4259 3.10323 10.3981 3.02647C10.3438 2.87635 10.2699 2.67209 10.2755 2.6693ZM22.2099 23.8526C22.3323 24.4943 22.4505 25.1697 22.5434 25.9085C22.8812 31.4474 23.1893 43.057 21.9524 50.3436C21.8215 53.0285 20.783 55.1816 20.4706 55.2703C20.4671 55.2721 20.455 55.2802 20.4349 55.2938C20.0908 55.5249 17.3822 57.3448 14.3872 56.942C13.2408 56.7877 12.342 56.8308 11.3714 56.8773C9.68646 56.9581 7.78541 57.0492 3.99763 56.1357C3.45304 55.7431 3.23773 55.4729 3.20818 55.2703C3.14063 54.8861 2.60026 52.1715 2.60026 52.1715C-0.916391 35.5002 0.155913 25.0346 0.14747 25.1444C0.155913 24.9755 0.171862 24.7992 0.18781 24.6228C0.195785 24.5346 0.203759 24.4464 0.210795 24.3592C0.548528 20.6694 0.75539 19.213 3.98075 18.0013C9.00085 16.1239 8.94975 13.2415 8.87055 8.77436C8.8673 8.59077 8.86399 8.4045 8.86099 8.21551C8.83566 7.17698 8.83144 6.33687 8.83144 6.33687C8.82722 6.34531 8.89477 4.54688 8.89477 4.54688V3.94318L12.8674 3.13262C12.8645 3.13829 12.8693 6.99754 12.8727 9.78114C12.8744 11.1435 12.8758 12.2483 12.8758 12.5174C13.165 15.0215 14.8389 15.4362 16.1695 15.7658C16.4899 15.8452 16.7904 15.9197 17.0468 16.0172C20.1624 17.4441 21.3065 20.7454 22.2099 23.8526Z" fill="#189cc4"></path>
+            </svg>
+        </div>
+
+        <div class="icons">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="modal__toggle-open icon icon-search">
+                <g id="Icons">
+                  <path id="search" 
+                        d="M17.7537 16.5623C18.0821 16.8907 18.0821 17.4253 17.7537 17.7537C17.4252 18.0821 16.8904 18.0821 16.5619 17.7537L12.4435 13.6364C12.2792 13.4722 11.9887 13.4511 11.8034 13.5774C11.8034 13.5774 11.6897 13.6658 11.4455 13.8048C10.5232 14.3268 9.45361 14.6299 8.31662 14.6299C4.82985 14.6299 2 11.8008 2 8.31496C2 4.8291 4.82985 2 8.31662 2C11.8034 2 14.6332 4.8291 14.6332 8.31496C14.6332 9.46007 14.3258 10.5378 13.7952 11.464C13.6563 11.6998 13.5805 11.7966 13.5805 11.7966C13.4457 11.9903 13.471 12.2765 13.6352 12.4407L17.7537 16.5623ZM8.31662 12.9459C10.877 12.9459 12.9488 10.8746 12.9488 8.31496C12.9488 5.7553 10.877 3.68399 8.31662 3.68399C5.75628 3.68399 3.68443 5.7553 3.68443 8.31496C3.68443 10.8746 5.75628 12.9459 8.31662 12.9459Z" 
+                        fill="black"></path>
+                </g>
+            </svg>
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon icon-account">
+                <g id="Group 209">
+                <circle id="Ellipse 23" cx="9.00002" cy="4.57143" r="3.82143" stroke="black" stroke-width="1.5"></circle>
+                <path id="Ellipse 24" d="M17 18.2852C17 13.8669 13.4183 10.2852 9 10.2852C4.58172 10.2852 1 13.8669 1 18.2852" stroke="black" stroke-width="1.5"></path>
+                </g>
+            </svg>
+            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">0<path 
+                 d="M12 4.75C12 2.54086 10.2091 0.75 8 0.75C5.79086 0.75 4 2.54086 4 4.75" stroke="black" stroke-width="1.5" stroke-linecap="round"></path>
+                 <mask id="mask0_44_9583" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="6" width="17" height="11"><path 
+                 d="M1.60098 6.72534L3.20098 15.1319H12.801L14.401 6.72534H16.001V16.8132H0.000976562V6.72534H1.60098Z" fill="black"></path>
+                 </mask><g mask="url(#mask0_44_9583)"><path d="M0.945068 7.56598L2.27867 15.9725H13.7235L15.0571 7.56598H0.945068Z" stroke="black" stroke-width="1.6" stroke-linejoin="round"></path></g></svg>
+        </div>
+    </div>
+
+    <div id="image-container">
+        <img src="./img/BBC-PLP-Coffee-Desktop.webp" alt="모든 커피">
+        <div class="text-overlay">모든 커피</div>
+    </div>
+    
+
+    <div id="category1">
+        <ul class="nav-category">
+            <li><a href="./.html">블렌드</a></li>
+            <li><a href="./.html">싱글 오리진</a></li>
+            <li><a href="./.html">휴먼 메이드</a></li>
+            <li><a href="./.html">세트</a></li>
+            <li><a href="./.html">인스턴트</a></li>
+            <li><a href="./.html">콜트브루 커피</a></li>
+        </ul>
+    </div>
+
+    <!-- 블렌드 -->
+    <div class="collection-title">
+        <h2>블렌드</h2>
+    </div>
+    
+    <div id="blend-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="/products/first-espresso-blend" class="image-slide">
+                <div class="image-wrapper">
+                    <div class="new-product-label">신제품</div>
+                    <img src="./img/blend_image1.webp" alt="퍼스트 에스프레소 블렌드" class="default-image">
+                    <img src="./img/blend_image1-2.webp" alt="퍼스트 에스프레소 블렌드 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">퍼스트 에스프레소 블렌드</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩30,000</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="/products/bella-donovan" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/blend_image2.webp" alt="벨라 도노반" class="default-image">
+                    <img src="./img/blend_image2-1.webp" alt="벨라 도노반 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">벨라 도노반</h3>
+                        <p class="product-description product-type">블렌드</p>
+                        <p class="product-description product-flavor">라즈베리, 초콜릿, 당밀</p>
+                        <p class="product-description product-roast">다크 로스트</p>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩25,000</button>
+                </div>
+            </a>
+            <!-- 세 번째 카드 -->
+            <a href="/products/hayes-valley-espresso" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/blend_image3.webp" alt="헤이즈 벨리 에스프레소" class="default-image">
+                    <img src="./img/blend_image3-1.webp" alt="헤이즈 벨리 에스프레소 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">헤이즈 벨리 에스프레소</h3>
+                        <p class="product-description product-type">블렌딩</p>
+                        <p class="product-description product-flavor">베이지 초콜릿, 오렌지필, 당밀</p>
+                        <p class="product-description product-roast">다크 로스팅</p>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩25,000</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./all-coffee.html">모두 보기</a>
+    </div>
+
+
+    <!-- 싱글 오리진 -->
+    <div class="collection-title">
+        <h2>싱글 오리진</h2>
+    </div>
+    
+    <div id="single-origin-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <div class="new-product-label">신제품</div>
+                    <img src="./img/4.webp" alt="르완다 냐마세케 냐부메라 워시드" class="default-image">
+                    <img src="./img/single-origin-4-1.webp" alt="르완다 냐마세케 냐부메라 워시드 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">르완다 냐마세케 냐부메라 워시드</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩35,000</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <div class="new-product-label">신제품</div>
+                    <img src="./img/single-origin-5.webp" alt="온두라스 산타 엘레나 카트라차" class="default-image">
+                    <img src="./img/single-origin-5-1.webp" alt="온두라스 산타 엘레나 카트라차 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">온두라스 산타 엘레나 카트라차 커뮤니티</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩35,000</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./somethingthatwehaventdontyet.html">모두 보기</a>
+    </div>
+
+
+    <!-- 휴먼 메이드 -->
+    <div class="collection-title">
+        <h2>휴먼 메이드</h2>
+    </div>
+    
+    <div id="human-made-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/human_made-6.webp" alt="휴먼 메이드 패스트 블렌드" class="default-image">
+                    <img src="./img/human_made-6.webp" alt="휴먼 메이드 패스트 블렌드 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">휴먼 메이드 패스트 블렌드</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩30,000</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/human_made-7.webp" alt="휴먼 메이드 퓨처 블렌드" class="default-image">
+                    <img src="./img/human_made-7.webp" alt="휴먼 메이드 퓨처 블렌드 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">휴먼 메이드 퓨처 블렌드</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩30,000</button>
+                </div>
+            </a>     
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./somethingthatwehaventdontyet.html">모두 보기</a>
+    </div>
+
+
+    <!-- 세트 -->
+    <div class="collection-title">
+        <h2>세트</h2>
+    </div>
+    
+    <div id="set-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/set-1.webp" alt="크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트" class="default-image">
+                    <img src="./img/set-1-2.webp" alt="크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩55,000</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/set-2.webp" alt="블렌드 박스" class="default-image">
+                    <img src="./img/set-2-1.webp" alt="블렌드 박스 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">블렌드 박스</h3>
+                        <p class="product-description product-type">커피 세트</p>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩35,000</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./somethingthatwehaventdontyet.html">모두 보기</a>
+    </div>
+
+
+    <!-- 인스턴트 -->
+    <div class="collection-title">
+        <h2>인스턴트</h2>
+    </div>
+    
+    <div id="instant-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/instant-1.webp" alt="크래프트 인스턴트 커피 브라이트" class="default-image">
+                    <img src="./img/instant-1-2.webp" alt="크래프트 인스턴트 커피 브라이트 블렌드 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">크래프트 인스턴트 커피 브라이트</h3>
+                    </div>
+                    <button class="add-to-cart">특별가격 ₩31,000</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/instant-2.webp" alt="크래프트 인스턴트 커피 에스프레소" class="default-image">
+                    <img src="./img/instant-2-2.webp" alt="크래프트 인스턴트 커피 에스프레소 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">크래프트 인스턴트 커피 에스프레소</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩35,000</button>
+                </div>
+            </a>
+            <!-- 세 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/instant-3.webp" alt="크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트" class="default-image">
+                    <img src="./img/instant-3-2.webp" alt="크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">크래프트 인스턴트 커피 에스프레소 & 커핑 스푼 세트</h3>
+                    </div>
+                    <button class="add-to-cart">카트에 추가 | ₩55,000</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./somethingthatwehaventdontyet.html">모두 보기</a>
+    </div>
+
+
+    <!-- 콜드브루 커피 -->
+    <div class="collection-title">
+        <h2>콜드브루 커피</h2>
+    </div>
+    
+    <div id="coldbrew-container">
+        <div class="image-container">
+            <!-- 첫 번째 카드 (신제품) -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/coldbrew-1.webp" alt="콜드브루 커피 (236ml) 브라이트 3캔 & 볼드 3캔 선물 세트" class="default-image">
+                    <img src="./img/coldbrew-1-2.webp" alt="콜드브루 커피 (236ml) 브라이트 3캔 & 볼드 3캔 선물 세트 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">콜드브루 커피 (236ml) 브라이트 3캔 & 볼드 3캔 선물 세트</h3>
+                    </div>
+                    <button class="add-to-cart">품절</button>
+                </div>
+            </a>
+            <!-- 두 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/coldbrew-2.webp" alt="콜드브루 커피 (236ml) 브라이트 6캔 선물 세트" class="default-image">
+                    <img src="./img/coldbrew-2-2.webp" alt="콜드브루 커피 (236ml) 브라이트 6캔 선물 세트 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">콜드브루 커피 (236ml) 브라이트 6캔 선물 세트</h3>
+                    </div>
+                    <button class="add-to-cart">품절</button>
+                </div>
+            </a>
+            <!-- 세 번째 카드 -->
+            <a href="./somethingthatwehaventdontyet.html" class="image-slide">
+                <div class="image-wrapper">
+                    <img src="./img/coldbrew-3.webp" alt="콜드브루 커피 (236ml) 볼드 6캔 선물 세트" class="default-image">
+                    <img src="./img/coldbrew-3-2.webp" alt="콜드브루 커피 (236ml) 볼드 6캔 선물 세트 호버 이미지" class="hover-image">
+                    <div class="product-info">
+                        <h3 class="product-name">콜드브루 커피 (236ml) 볼드 6캔 선물 세트</h3>
+                    </div>
+                    <button class="add-to-cart">품절</button>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <div class="view-all-box">
+        <a href="./somethingthatwehaventdontyet.html">모두 보기</a>
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4 class="footer-column-title">블루보틀 커피</h4>
+                    <ul class="footer-column-list">
+                        <li><a href="#">카페 찾기</a></li>
+                        <li><a href="#">커리어</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">알아보기</h4>
+                    <ul class="footer-column-list">
+                        <li><a href="#">브랜드 소개</a></li>
+                        <li><a href="#">블루보틀 커피</a></li>
+                        <li><a href="#">지속가능성</a></li>
+                        <li><a href="#">브루잉 가이드</a></li>
+                        <li><a href="#">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-column-title">문의</h4>
+                    <ul class="footer-column-list">
+                        <li><a href="#">고객 문의</a></li>
+                        <li><a href="#">단체/기업 구매 문의</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-newsletter">
+                    <h4 class="footer-column-title">구독하고 최신 정보를 받아보세요.</h4>
+                    <p class="footer-newsletter-description">이메일 뉴스레터에 가입하여 독점 혜택, 블루보틀 뉴스, 이벤트, 그리고 기분 좋은 신제품 소식을 누구보다 먼저 알아보세요.</p>
+                    <form class="footer-newsletter-form">
+                        <input type="email" placeholder="이메일 주소를 입력해 주세요.">
+                        <button type="submit">구독하기</button>
+                    </form>
+                    <div class="footer-policies">
+                        <a href="#">개인정보 처리 방침</a> |
+                        <a href="#">이용 약관</a>
+                    </div>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/bluebottlecoffee" target="_blank" class="social-link">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-facebook" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M18 10.049C18 5.603 14.419 2 10 2c-4.419 0-8 3.603-8 8.049C2 14.067 4.925 17.396 8.75 18v-5.624H6.719v-2.328h2.03V8.275c0-2.017 1.195-3.132 3.023-3.132.874 0 1.79.158 1.79.158v1.98h-1.009c-.994 0-1.303.621-1.303 1.258v1.51h2.219l-.355 2.326H11.25V18c3.825-.604 6.75-3.933 6.75-7.951Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/bluebottleroast" target="_blank" class="social-link">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-twitter" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.27274 2.8L10.8009 7.82176L15.2183 2.8H16.986L11.5861 8.93887L17.3849 17.1928H12.7272L8.99645 11.8828L4.32555 17.1928H2.55769L8.21157 10.7657L2.61506 2.8H7.27274ZM13.5151 15.9248L5.06895 4.10931H6.4743L14.9204 15.9248H13.5151Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/bluebottlekorea/" target="_blank" class="social-link">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-instagram" viewBox="0 0 20 20">
+                                <path fill="currentColor" fill-rule="evenodd" d="M13.23 3.492c-.84-.037-1.096-.046-3.23-.046-2.144 0-2.39.01-3.238.055-.776.027-1.195.164-1.487.273a2.43 2.43 0 0 0-.912.593 2.486 2.486 0 0 0-.602.922c-.11.282-.238.702-.274 1.486-.046.84-.046 1.095-.046 3.23 0 2.134.01 2.39.046 3.229.004.51.097 1.016.274 1.495.145.365.319.639.602.913.282.282.538.456.92.602.474.176.974.268 1.479.273.848.046 1.103.046 3.238.046 2.134 0 2.39-.01 3.23-.046.784-.036 1.203-.164 1.486-.273.374-.146.648-.329.921-.602.283-.283.447-.548.602-.922.177-.476.27-.979.274-1.486.037-.84.046-1.095.046-3.23 0-2.134-.01-2.39-.055-3.229-.027-.784-.164-1.204-.274-1.495a2.43 2.43 0 0 0-.593-.913 2.604 2.604 0 0 0-.92-.602c-.284-.11-.703-.237-1.488-.273ZM6.697 2.05c.857-.036 1.131-.045 3.302-.045 1.1-.014 2.202.001 3.302.045.664.014 1.321.14 1.943.374a3.968 3.968 0 0 1 1.414.922c.41.397.728.88.93 1.414.23.622.354 1.279.365 1.942C18 7.56 18 7.824 18 10.005c0 2.17-.01 2.444-.046 3.292-.036.858-.173 1.442-.374 1.943-.2.53-.474.976-.92 1.423a3.896 3.896 0 0 1-1.415.922c-.51.191-1.095.337-1.943.374-.857.036-1.122.045-3.302.045-2.171 0-2.445-.009-3.302-.055-.849-.027-1.432-.164-1.943-.364a4.152 4.152 0 0 1-1.414-.922 4.128 4.128 0 0 1-.93-1.423c-.183-.51-.329-1.085-.365-1.943C2.009 12.45 2 12.167 2 10.004c0-2.161 0-2.435.055-3.302.027-.848.164-1.432.365-1.942a4.44 4.44 0 0 1 .92-1.414 4.18 4.18 0 0 1 1.415-.93c.51-.183 1.094-.33 1.943-.366Zm.427 4.806a4.105 4.105 0 1 1 5.805 5.805 4.105 4.105 0 0 1-5.805-5.805Zm1.882 5.371a2.668 2.668 0 1 0 2.042-4.93 2.668 2.668 0 0 0-2.042 4.93Zm5.922-5.942a.958.958 0 1 1-1.355-1.355.958.958 0 0 1 1.355 1.355Z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCyki4e6RG84BT_xzi4oYkRw" target="_blank" class="social-link">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-youtube" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M18.16 5.87c.34 1.309.34 4.08.34 4.08s0 2.771-.34 4.08a2.125 2.125 0 0 1-1.53 1.53c-1.309.34-6.63.34-6.63.34s-5.321 0-6.63-.34a2.125 2.125 0 0 1-1.53-1.53c-.34-1.309-.34-4.08-.34-4.08s0-2.771.34-4.08a2.173 2.173 0 0 1 1.53-1.53C4.679 4 10 4 10 4s5.321 0 6.63.34a2.173 2.173 0 0 1 1.53 1.53ZM8.3 12.5l4.42-2.55L8.3 7.4v5.1Z"></path>
+                            </svg>
+                        </a>
+                        <a href="http://pf.kakao.com/_yShcxj" target="_blank" class="social-link">
+                            <svg aria-hidden="true" focusable="false" class="icon icon-kakao" viewBox="0 0 18 17">
+                                <path fill="currentColor" d="M8.987 0C4.023 0 0 3.626 0 8.1c0 2.848 1.664 5.332 4.232 6.697-.234 1.315-.966 3.188-1.107 3.634-.14.446-.015.78.418.78.35 0 2.32-.986 3.863-1.92 1.173.17 2.38.257 3.58.257 4.965 0 8.987-3.626 8.987-8.1C17.974 3.625 13.952 0 8.987 0Zm-3.49 10.285c-.56 0-.987-.427-.987-.986 0-.56.427-.987.987-.987.558 0 .986.427.986.987 0 .56-.428.986-.986.986Zm5.974 0c-.558 0-.986-.427-.986-.986 0-.56.428-.987.987-.987.558 0 .986.427.986.987 0 .56-.428.986-.987.986Zm-2.48-1.97c-1.822 0-2.974-1.07-2.974-2.56 0-.22-.01-.428-.01-.637h-.987v-.717c0-.1.02-.19.03-.287.26-1.752 1.862-2.987 3.94-2.987 2.09 0 3.692 1.235 3.941 2.987.01.097.03.188.03.287v.717h-.987c0 .209-.01 .417-.01 .637 0 1.49-1.151 2.56-2.973 2.56Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-company-info">
+                <p>상호: MINT BOTTLE COFFEE | 대표자: BOGYEONG | 커피전문점사업자: 김보경</p>
+                <p>사업자등록번호: 123-45-67890 | <a href="#" class="business-info-link">사업정보확인</a> | Somewhere in Universe | 대표번호: 1234-5678</p>
+                <p>이메일: bokey0125@gmail.com | 주소: Somewhere in Universe</p>
+                <p>호스팅서비스 제공자: bokey, Inc.</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <div class="footer-legal-links">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">판매이용약관</a>
+                    <a href="#">환불정책</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>© 2023 MINT BOTTLE BOKEY COFFEE INC., ALL RIGHTS RESERVED</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+      
+
+      
+</body>
+</html>

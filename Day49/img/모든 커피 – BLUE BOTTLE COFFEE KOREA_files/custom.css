@@ -1,0 +1,12 @@
+/* Email marketing confirmation */
+.shopify-email-marketing-confirmation__container {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .shopify-email-marketing-confirmation__container h1 {
+    display:none;
+  }

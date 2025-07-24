@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민트보틀 - MINT BOTTLE</title>
+    <link rel="stylesheet" href="header.css" />
+    <script src="./header.js"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <script type="text/javascript" src="./src/lib/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#header').load("./header.html");
+
+            $('.slider').bxSlider({
+                mode: 'horizontal',// 가로 방향 수평 슬라이드
+                speed: 500,        // 이동 속도를 설정
+                pager: false,      // 현재 위치 페이징 표시 여부 설정
+                moveSlides: 1,     // 슬라이드 이동시 개수
+                slideWidth: 1920,   // 슬라이드 너비
+                minSlides: 1,
+                maxSlides: 1,      // 최소 노출 개수
+                auto: true,        // 자동 실행 여부
+                autoHover: true,   // 마우스 호버시 정지 여부
+                adaptiveHeight: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <ul class="nav-menu">
+            <li><a href="../shopping.html">쇼핑</a></li>
+            <li><a href="../somethingthatwehaventdontyet.html">베스트셀러</a></li>
+            <li><a href="../somethingthatwehaventdontyet.html">세트</a></li>
+            <li><a href="../somethingthatwehaventdontyet.html">카페</a></li>
+            <li><a href="../블로그/blog.html">블로그</a></li>
+          </ul>
+        <div class="logo">
+            <img src="./src/icon/logo.png" />
+        </div>
+        <div class="icons">
+            <img src="./src/icon/search.png" alt="검색" />
+            <img src="./src/icon/user.png" alt="사용자 계정" id="login-icon" />
+            <img src="./src/icon/shopping_cart.png" alt="장바구니" />
+        </div>
+    </div>
+
+    <!-- 로그인 팝업 -->
+    <div id="login-popup" class="login-popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close-btn">닫기 &times;</span>
+            <h2>로그인</h2>
+            <p>블루보틀 온라인 스토어의 다양한 혜택을 만나보세요</p>
+            <form>
+                <input type="email" placeholder="이메일 주소 *" required />
+                <input type="password" placeholder="비밀번호 *" required />
+                <button type="submit">로그인</button>
+                <button type="button" class="signup-btn">회원 가입</button>
+            </form>
+        </div>
+    </div>
+
+    <ul class="slider slide-img-wrap">
+        <li><img src="./src/img/main/m1.jpg" alt="메인이미지1" />
+            <div class="msg">
+                <div class="title">한정기간 특별 혜택</div>
+                <p>인스턴스 커피 브라이트 10% 할인</p>
+                <button type="button" class="main1_btn">자세히 보기</button>
+            </div>
+        </li>
+        <li><img src="./src/img/main/m2.jpg" alt="메인이미지2" />
+            <div class="msg msg2">
+                <div class="title">퍼스트 에스프레소 블렌드</div>
+                <p>커피의 역사를 바꾼 한 잔을 재해석한 블렌드</p>
+                <button type="button" class="main1_btn">자세히 보기</button>
+                <button type="button" class="main1_btn">커피 클래스 예약</button>
+            </div>
+        </li>
+    </ul>
+
+    <div class="product">
+        <span>
+            <div class="product_box">
+                <strong class="product_name">벨라 도노반</strong>
+                <p>블루보틀 시그니처 블렌드</p>
+            </div>
+            <img src="./src/img/product/product1.png" />
+        </span>
+        <span>
+            <div class="product_box">
+                <strong class="product_name">트래블 머그 화이트 20oz</strong>
+                <p>넉넉한 사이즈와 실용적인 디자인</p>
+            </div>
+
+            <img src="./src/img/product/product2.png" />
+        </span>
+        <span>
+            <div class="product_box">
+                <strong class="product_name">머그</strong>
+                <p>커피 한 잔을 위한 완벽한 조력자</p>
+            </div>
+            <img src="./src/img/product/product3.png" />
+        </span>
+       
+    </div>
+    <div class="main_img3_wrap">
+        <img src="./src/img/main/m3.png" class="main_img3"/>
+        <div class="msg3">
+            <h2 class="title">콜드브루 커피 세트</h2>
+            <p>오랜 시간 정성 어린 브루잉을 통해 완성한 <br />
+                신선한 스페셜티 커피를 간편하게 즐겨보세요 
+            </p>
+            <button type="button" class="main_btn">자세히 보기</button>
+        </div>
+    </div>
+    <div class="copy_img">
+        <div class="copy_img1">
+            <img src="./src/img/main/copy.png" />
+        </div>
+        <div class="copy_img2">
+            <img src="./src/img/main/copy2.png" />
+        </div>
+        <div>
+            <img src="./src/img/main/copy3.png" />
+        </div>
+        <div class="popup_store">
+            <img src="./src/img/main/copy4.png" />
+        </div>
+    </div>
+
+    <footer id="footer">
+        <img src="./src/img/main/footer.png" />
+
+    </footer>
+    
+</body>
+
+</html>

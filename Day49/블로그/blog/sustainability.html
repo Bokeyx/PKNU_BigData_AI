@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지속-가능성</title>
+
+<style>
+body {
+    background-color: rgb(244, 238, 230);
+    margin: 0;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    max-width: 1200px;  /* 최대 폭 제한 */
+    margin: 0 auto;     /* 좌우 중앙정렬 */
+    padding: 0 40px;    /* 좌우 여백 */
+    box-sizing: border-box;
+  }
+  
+/* 카드 배치 영역 flex 중앙 정렬 */
+.row {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;  /* 카드들을 중앙으로 모음 */
+gap: 40px;                /* 카드 사이 여백 */
+}
+
+/* 카드 개별 크기 고정 */
+.col {
+flex: 0 0 350px;  /* 카드 가로 고정 */
+}
+
+/* 카드 전체 크기 고정 */
+.card.h-100 {
+height: 350px;     /* 카드 세로 고정 */
+display: flex;
+flex-direction: column;
+}
+
+/* 이미지 꽉 채우기 & 잘림 */
+.card-img-top {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+/* 텍스트 아래로 정렬 */
+.card-body {
+flex: 1;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+text-align: center;
+}
+
+/* 글씨 스타일 */
+.card-text {
+font-weight: bold;
+font-size: 14px;
+color: #000;
+text-decoration: none;
+}
+
+.card-txt {
+font-size: 12px;
+color: gray;
+text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(244, 238, 230);
+    color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: top 0.3s;
+    z-index: 1000;
+    position: relative;
+}
+
+.left-menu, .icons {
+    display: flex;
+    align-items: center;
+}
+
+.left-menu a, .icons button {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+    
+}
+
+.center-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-logo a img {
+    height: 50px;
+}
+
+.icons button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3000;
+    position: relative;
+  }
+  
+.close-btn {
+font-size: 30px;
+position: absolute;
+top: 50px;
+left: 30px;
+cursor: pointer;
+}
+
+.menu-overlay {
+position: fixed;
+inset: 0;
+background: rgb(244, 238, 230);
+display: none;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 2000;
+}
+
+#menu-toggle:checked ~ .menu-overlay {
+display: flex;
+}
+
+.overlay-menu {
+list-style: none;
+padding: 0;
+text-align: center;
+}
+
+.overlay-menu li {
+margin: 20px 0;
+}
+
+.overlay-menu a {
+text-decoration: none;
+font-size: 20px;
+color: #333;
+}
+
+/* 모바일 전용 햄버거 버튼 표시 */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    .left-menu {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+    <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="left-menu">
+            <a href="....">베스트셀러</a>
+            <a href="....">세트</a>
+            <a href="....">카페</a>
+            <a href="../blog.html">블로그</a>
+        </div>
+
+        <div class="center-logo">
+            <a href="...."><img src="./bluebottle_removed_bg.png" alt="Logo"></a>
+        </div>
+
+        <div class="icons">
+            <button title="검색">🔍</button>
+            <button title="마이페이지">👤</button>
+            <button title="장바구니">🛒</button>
+        </div>
+    </header>
+
+    <!-- 입력자리 -->
+    <div class="collections-menu-wrap ">
+        <h1 class="display-5"><strong>지속 가능성</strong></h1>     
+        <ul class="list-unstyled collections-menu"></ul>
+    </div>
+    <div class="container py-5"></div>
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+            <div class="col">
+            <div class="card h-100">
+                <a href="./sustain1.html"><img src="https://kr.bluebottlecoffee.com/cdn/shop/articles/Carbon_Neutral_Blog_Thumbnail_Only.jpg?v=1722493006&width=1680" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <a href="./sustain1.html" class="card-text">2024년 탄소중립을 향한 우리의 로드맵</a><br/>
+                    <a href="./sustain1.html" class="card-txt">자세히 보기</a><br/>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!-- 입력자리 -->
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.left-menu').classList.toggle('active');
+        }
+
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > lastScroll) {
+                header.style.top = '-100px'; // 내릴 때 숨김
+            } else {
+                header.style.top = '0'; // 올릴 때 보임
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+</body>
+</html>
