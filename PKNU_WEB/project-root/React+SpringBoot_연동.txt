@@ -1,0 +1,138 @@
+#######################################################
+##################[React 프로젝트 생성하기]##################
+#######################################################
+
+0. 현재 SpringBoot 내에 frontend 폴더는 삭제하기
+  - React 프로젝트 생성명령을 통해서 frontend 프로젝트 생성
+
+1. React 프로젝트 생성하기
+  - 생성 위치: SpringBoot projec-root 폴더 내에 생성
+  - 프로젝트 폴더 이름: frontend
+   > npx create-react-app frontend
+
+2. 생성된 프로젝트 폴더로 이동
+   > cd frontend
+
+3. React 개발 서버 구동 테스트
+   > npm start
+
+4. React Router 기능을 통해 페이지 이동(Router) 처리를 위한 Router-dom 설치하기
+  - 설치 위치는 항상: frontend 내에서
+   > npm install react-router-dom
+
+5. React에서 Baecend API 호출 처리를 위하여 axios 라이브러리 설치 
+  - 설치 위치는 항상: frontend 내에서
+   > npm install axios
+
+
+
+#######################################################
+###################[React 폴더 구성하기]####################
+#######################################################
+<폴더 구조>
+/src/config: axios: 설정 관리(Backend 연결을 위함)
+/src/components: HTML 페이지 화면 구성 폴더(pages에서 화면 구성사용)
+/src/pages: CRUD 기능 처리 폴더(Backend에 요청 및 응답 받는 역활)
+/src/routers: 메뉴(카테고리)별 URL과 page 매핑(URL 매핑 처리)
+/src/service: axios를 통해서 Backend로 링크 처리
+/src/: Backend(SpringBoot 또는 Flask) 서버 연결 설정 (무조건 src 밑에 위치해야 하며, 이름 수정 불가)
+
+
+
+#######################################################
+#######################[React Test]########################
+#######################################################
+1. components/
+  - HomePage.jsx 파일 생성
+
+2. routers/
+  - HomeRouters.jsx 파일 생성
+
+3. App.js
+  - HomeRouters.jsx 연결
+
+4. 서버 테스트
+
+
+
+#######################################################
+##############[Backend 연결을 위한 Proxy 설정]################
+#######################################################
+<Proxy 설정>
+ - 서로 다른 서버(이기종) 간에 통신을 위해 IP 및 Port를 정의하는 것을 의미함
+ - 일반적으로 하나의 서버에서 사용하는 IP와 Port는 동일
+  -> 즉, 용청과 응답에 사용되는 IP와 Port는 동일함
+ - 한의 서버에서 다른 서버로 요청을 보내기 위해서는 내보내는 서버(다른서버)의 IP와 Port로 변경해서 보내야 합니다.
+ - 요청 시 중간에 자기 자신의 IP와 Port를 가로채서 외부 IP와 Port로 변경하는 작업을 Porxy 처리라고 칭합니다.
+
+<Proxy 처리를 위한 파일 - React 영역>
+ - src / setupProxy.js: 파일명 수정 불가: 최초 생성 1회
+ - src / config / axioslnstance.jsx: 최초 생성 1회
+ - src / service / testApi.jsx: 메뉴(카테고리) 별로 파일을 생성하여 사용
+				    : 향후 pages 폴더 내에 파일들은 service 내에 파일을 이용하여 Backend 요청 처리함
+
+
+
+###########################################################
+##############[React 내에서 Test를 위한 페이지 구성]################
+###########################################################
+1. 폴더 및 파일 구성
+ - src/components/test/TestSpringBootForm.jsx
+  : SpringBoot의 응답 결과 출력 화면 정의
+ - src/pages/test/TestSpringBoot.jsx
+  : SpringBoot에 요청 및 응답 받아오는 처리 정의
+  : 응답 받은 data를 TestSpringBootForm.jsx에 전달
+ - src/components/HomePage.jsx: Test 링크 추가
+ - src/routers/HomeRouters.jsc: TestSpringBoot.jsx 라우팅 처리
+
+
+
+###########################################################
+############[SpringBoot 내에서 Test를 위한 Class 생성]###############
+###########################################################
+1. Controller 클래스 내에 응답을 처리 할 java class 파일 생성
+ - controller/ReactSpringBootTest.java
+  -> 함수 이름: getReactSpringConnect
+  -> 응답 내용: "SpringBoot로 연결이 잘 되었습니다.
+
+
+
+###########################################################
+###################[React 및 Spring 테스트]######################
+###########################################################
+1. 서버 실행 순서
+ - SpringBoot 서버 실행
+ - React 서버 실행
+
+2. React 브라우저 페이지에서 링크 클릭으로 테스트
+
+3. SpringBoot에서도 자체 테스트 가능
+ http://localhost:8080/test/spring_test
+
+
+=================================================
+
+###########################################################
+######[Cart(주문내역 관리) CRUD 페이지 제작을 위한 폴더 구조]#########
+###########################################################
+1. SpringBoot 쪽은 이미 완성되어 있음
+
+2. React 쪽은 아래와 같이 구성
+(화면 구성)
+ /src/componenents/cart/CartInsertUpdateForm.jsx
+ /src/componenents/cart/CartIistForm.jsx
+
+(페이지)
+ /src/pages/cart/CartList.jsx : SpringBoot로부터 전체 조회 처리 
+ /src/pages/cart/CartView.jsx : SpringBoot로부터 상세조회/수정/삭제 처리
+ /src/pages/cart/CartInsert.jsx : SpringBoot로부터 입력(저장) 처리
+
+(Cart 관련 라우터 처리)
+ /src/routers/CartRouters.jsx : 전체조회, 상세보기, 입력 URL 패턴 추가(pages 폴더에 있는 모든 것.)
+ /src/App.js
+
+(CORS SpringBoot URL 처리)
+ /src/service/CartApi.jsx : SpringBoot로 요청할 전체조회(get), 상세조회(get), 입력(post), 수정(put), 삭제(delete) URL 정의
+
+(최초 진입점 추가)
+ /src/components/HomePage.jsx: 주문내역 바로가기 링크 추가

@@ -1,0 +1,23 @@
+{
+<<<<<<< HEAD
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic"
+=======
+    // root 폴더 정의하기
+    // - package 및 import 시에는 src 폴더부터 작성
+    // - 물리적인 파일명을 찾을 때는 PKNU_WEB 폴더부터 작성
+    //   (물리적인 파일명: 파일 입력/출력 등 처리시에)
+    // - 패키지명 작성법: 폴더명을 기준으로 점(.)으로 연결
+    //   (예시:src.com.pknu202502.day52_java_base_01)
+    // - import 작성법: 패키지명과 작성법 동일(마지막에는 클래스 파일명)
+    //   (예시:src.com.pknu202502.day52_java_base_01.HelloWorld)
+    // - 패키지 폴더 구조 규칙: 규정된 규칙은 없으며, 도메인 주소를 따르는게 일반적임
+    //                        : 도메인 주소를 거꾸로 작성하여 폴더 구조 정의
+    //   (예시: google.com의 도메인 프로젝트명이 SiteDeveloper라고 한다면
+    //        : SiteDeveloper/src/com/google/개발폴더들/)
+    "java.project.sourcePaths": ["src"],
+
+    // 실행시(run) 실패하여도 -> 디버깅 진행 허용
+    "java.debug.settings.onBuildFailureProceed": true
+>>>>>>> 675355c (things i did for 6 months)
+}

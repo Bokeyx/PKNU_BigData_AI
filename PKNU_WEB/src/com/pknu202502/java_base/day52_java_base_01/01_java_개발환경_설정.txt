@@ -1,0 +1,30 @@
+@ 실무에서 권장하는 JDK 버전
+ * 기업 내부 시스템 개발: java JDK 17 LTS 권장 (SpringBoot 자바 백엔드 개발 3.x 버전 최소버전)
+ 
+ * 최신 기능 + 장기 서비스: java JDK 21 LTS
+  - 기업에서는 최신버전을 잘 사용하지 않음(안전성 문제가 있을 수 있기 때문에)
+
+@ java 개발 환경
+ * JDK 설치 필요
+  - 시스템 설정 필요: 환경변수 등록을 의미함
+  - 시스템 환경에: JAVA_HOME 등록(jdk 폴더 위치),
+                   path에 jdk의 bin 폴더 위치 정의
+  - 환경 설정 후 확인 방법
+   : command 창에서 java 및 javac 입력 후 엔터 (내용 나오면 성공)
+   : javac -> java 코드 컴파일러(해석기)
+   : java -> java 코드 실행(결과물 출력)
+   : Editor에서 기본적으로 -> javac(컴파일)는 자동으로 해줍니다.(저장 시점에)
+                           -> java 코드 저장 후 실행만하면 됨...
+
+ * Editor 필요
+  - VS-Code, 이클립스, 인텔리제이 등등..
+  - 최근 VS-Code에서 개발하는 추세 (기존에는 이클립스 사용자 층이 많았음)
+
+@ Java와 관련한 VS-Code Extension Pack
+ * Java
+ * Code Runner
+ * Language Support for JAVA(TM) by Red Hat
+ * Debugger for Java
+ * Java Test Runner or Test Runner for Java
+ * Maven for javn
+ * Extension Pack for Java

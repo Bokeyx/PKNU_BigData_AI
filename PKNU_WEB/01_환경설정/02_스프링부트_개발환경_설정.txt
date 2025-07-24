@@ -1,0 +1,85 @@
+<SpringBoot Framework>
+ - Java 기반의 웹어플리케이션 프로그램을 할 수 있도록 지원하는
+   Web Framework 임
+
+ - Framework : 이미 구조화되어 제공되는 라이브러리로,
+                   : 제공되는 구조에 맞게 파일을 생성 및 코드를 작성
+                   : 코드 작성도 Framework의 메뉴얼에 따라 작성해야함
+                     즉, 클래스 구조(상속, 인터페이스, 추상 등이 포함됨)에 대한 
+                         약속된 규약에 따라 처리됩니다.
+
+ - 개발 버전
+   * VS-Code : 확장팩 설치
+   * SpringBoot 3.x이상 버전(우리는 4.4버전 사용할 예정임)
+   * JDK 버전 : SpringBoot 3.x이상 버전을 사용하기 위해서는 
+                    JDK 17 이상 버전을 사용해야함
+
+==============================================
+ [VS-Code 확장팩]
+==============================================
+ - Java Extension Pack
+ - Spring Boot Extension Pack
+ - Spring Initializer : 스프링부트 프레임워크 다운로드 받는 곳(vs-code 기준)
+ - Debugger for Java
+ - React Developer Tools
+ - Live Reload
+
+
+==============================================
+ [스프링부트 프레임워크 다운로드]
+==============================================
+ 1. 스프링부트 프레임워크 다운로드 방법 2가지(2가지 중 한가지 방법 사용)
+   * 스프링부트 사이트에서 다운 받기
+     - 접속 URL : https://start.spring.io
+
+   * VS-Code에서 다운 받기 
+     - VS-Code에서 [Ctrl + Shift + P] 
+       -> Spring Initializr: Create Maven Project 선택
+
+
+==============================================
+ [스프링부트 프레임워크 시작(진입점) 클래스]
+==============================================
+  * 시작 클래스(main 클래스) 위치
+    - main 메소드가 위치한 클래스
+     : src/ProjectApplication.java
+
+  * 터미널에서 서버 시작하기
+    - project-root 폴더 위치에서 아래 명령 실행
+    >mvnw spring-boot:run
+
+
+==============================================
+<백엔드 테스트를 위한 프론트 tool 설치>
+* Postman tool 사용
+ - 사용자의 요청 데이터 처리를 대행하는 테스트 tool
+ - VS-Code 홗장팩 설치 필요
+  -> Postman 및 Postman Runner 확장팩 설치
+  -> 설치 후 VS-Code 재설치
+ - 
+
+
+{
+    "mem_id" : "n001",
+    "mem_pass" : "1234",
+    "mem_name" : "탁원재",
+    "mem_regno1" : "900101",
+    "mem_regno2" : "1234567",
+    "mem_bir" : "1990-01-01",
+    "mem_zip" : "1234",
+    "mem_add1" : "서울 강남구",
+    "mem_add2" : "테헤란로",
+    "mem_hometel" : "02-1234-1234",
+    "mem_comtel" : "02-1234-1234",
+    "mem_hp" : "010-1234-1234",
+    "mem_mail" : "tak@gmail.com",
+    "mem_job" : "분석가",
+    "mem_like" : "코딩",
+    "mem_memorial" : "결혼기념일",
+    "mem_memorialday" : "2010-01-01",
+    "mem_mileage" : 1000,
+    "mem_delete" : "N"
+}
+
+
+
