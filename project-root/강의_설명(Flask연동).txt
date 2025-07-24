@@ -1,0 +1,23 @@
+<아나콘다 프롬프트에서 진행>
+1. 가상환경 생성
+ >conda create -n pk_flask python=3.9
+
+2. 생성한 가상환경으로 활성화하기
+ >conda activate pk_flask
+
+3. Kernel 생성하기
+ - Jupyter notebook 설치하기
+  >pip install jupyter notebook
+  >python -m ipykernel install --user --name pk_flask --display-name pk_flask_kernel
+
+4. 기본 라이브러리 설치
+ >pip install ipython jupyter pandas xlrd seaborn pyarrow openpyxl selenium folium plotly
+ >pip install numpy==1.24.3
+ >pip install scikit-learn==1.5.1
+ >pip install xgboost==2.0.2
+
+5. Flask 설치
+ >conda install -c conda-forge flask
+
+6. CORS 허용을 위한 라이브러리 설치
+ >conda install -c conda-forge flask_cors
